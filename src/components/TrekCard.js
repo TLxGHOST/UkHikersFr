@@ -35,7 +35,7 @@ const TrekCard = ({ trek }) => {
           {trek.description?.substring(0, 100)}
           {trek.description?.length > 100 ? '...' : ''}
         </p>
-        <p className="trek-price">£{trek.price?.toFixed(2) || '0.00'}</p>
+        <p className="trek-price">₹{trek.price?.toFixed(2) || '0.00'}</p>
         <div className="trek-actions">
           <Link to={`/trek/${trek._id}`} className="trek-details-btn">View Details</Link>
           <Link to={`/trek/${trek._id}?book=true`} className="trek-book-btn">Book Now</Link>

@@ -10,7 +10,7 @@ const AboutPage = () => {
         <h2 style={{ marginBottom: '15px', fontSize: '1.8rem' }}>Our Mission</h2>
         <p style={{ lineHeight: '1.6', marginBottom: '15px' }}>
           UkHiker was founded with a simple mission: to help people explore the breathtaking landscapes 
-          of the United Kingdom through organized treks and hiking experiences. We believe that nature 
+          of the Uttarakands beauty through organized treks and hiking experiences. We believe that nature 
           is one of the greatest gifts we have, and we want to make it accessible to everyone.
         </p>
         <p style={{ lineHeight: '1.6' }}>
@@ -43,6 +43,7 @@ const AboutPage = () => {
           Whether you're looking for a challenging mountain climb or a peaceful walk through lush 
           valleys, UkHiker has the perfect trek for you.
         </p>
+        
       </section>
     </div>
   );
