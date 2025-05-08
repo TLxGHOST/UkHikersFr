@@ -134,11 +134,11 @@ const ContactPage = () => {
           
           <div style={{ marginTop: '40px', textAlign: 'center' }}>
             <h3 style={{ marginBottom: '10px', fontSize: '1.3rem' }}>Other Ways to Reach Us</h3>
-            <p style={{ marginBottom: '5px' }}>📧</p>
-            // Continuation of ContactPage.js
-            <p style={{ marginBottom: '5px' }}>📧 Email: info@ukhiker.com</p>
-            <p style={{ marginBottom: '5px' }}>📞 Phone: +44 123 456 7890</p>
-            <p>🏢 Address: 123 Hiking Street, London, UK</p>
+           
+            
+            <p style={{ marginBottom: '5px' }}>📧 Email: btejanshu@gmail.com</p>
+            <p style={{ marginBottom: '5px' }}>📞 Phone: +91-7877109642</p>
+            <p>🏢 Bhandari Bhavn, CHinyali Saur, Uttarkahsi, UK</p>
           </div>
         </>
       )}

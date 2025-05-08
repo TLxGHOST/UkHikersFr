@@ -18,7 +18,7 @@ function App() {
     fetch('https://ukhikersba.onrender.com')
       .then(res => res.text())
       .then(data => {
-        setServerStatus('Connected to server: ' + data);
+        setServerStatus('Server in your Service 😊😊 ');
         setLoading(false);
       })
       .catch(err => {

@@ -19,7 +19,7 @@ const TrekCard = ({ trek }) => {
   return (
     <div className="trek-card">
       <img 
-        src={trek.imageUrl || 'https://via.placeholder.com/300x200?text=No+Image'} 
+        src={trek.imageUrl } 
         alt={trek.title} 
         className="trek-image" 
       />

@@ -5,7 +5,14 @@ const Footer = () => {
   return (
     <footer style={styles.footer}>
       <div style={styles.container}>
-        <p style={styles.copyright}>© {new Date().getFullYear()} UkHiker. All rights reserved.</p>
+      <p style={styles.copyright}>
+  © {new Date().getFullYear()} Developed by{' '}
+  <a href="https://github.com/TLxGHOST" style={{ color: 'red' }}>
+  TLxGHOST
+  </a>. All rights reserved by Founder <a href="https://www.instagram.com/ukhikers/" style={{ color: 'red' }}>
+  DEEPANSHU BHARTWAL 
+  </a>.
+</p>
       </div>
     </footer>
   );
