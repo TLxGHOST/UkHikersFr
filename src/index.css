@@ -1,13 +1,265 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Main App Styles */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.content {
+  flex: 1;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.server-status {
+  background-color: #f8f9fa;
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 12px;
+  color: #6c757d;
+}
+
+/* Trek Card Styles */
+.treks-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.trek-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.trek-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.trek-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.trek-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.trek-title {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.trek-location {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.trek-difficulty {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.trek-difficulty.easy {
+  background-color: #c6f6d5;
+  color: #22543d;
+}
+
+.trek-difficulty.moderate {
+  background-color: #fefcbf;
+  color: #744210;
+}
+
+.trek-difficulty.hard {
+  background-color: #fed7d7;
+  color: #822727;
+}
+
+.trek-description {
+  margin-bottom: 15px;
+  color: #718096;
+  flex-grow: 1;
+}
+
+.trek-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 15px;
+}
+
+.trek-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.trek-details-btn, .trek-book-btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.trek-details-btn {
+  background-color: #e2e8f0;
+  color: #2d3748;
+}
+
+.trek-details-btn:hover {
+  background-color: #cbd5e0;
+}
+
+.trek-book-btn {
+  background-color: #4299e1;
+  color: white;
+}
+
+.trek-book-btn:hover {
+  background-color: #3182ce;
+}
+
+/* Trek Details Page */
+.trek-details-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.trek-details-header {
+  margin-bottom: 30px;
+}
+
+.trek-details-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.trek-details-content {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 30px;
+}
+
+.trek-details-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.trek-details-main img {
+  width: 100%;
+  border-radius: 8px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.trek-details-description {
+  line-height: 1.7;
+}
+
+.trek-details-sidebar {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.trek-details-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.trek-details-info {
+  margin-bottom: 20px;
+}
+
+.trek-details-info div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.booking-form {
+  margin-top: 20px;
+}
+
+.booking-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.booking-form button:hover {
+  background-color: #3182ce;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border-left-color: #4299e1;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .trek-details-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .treks-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 }
