@@ -12,6 +12,7 @@ import LoadingSpinner from './components/LoadingSpinner';
 function App() {
   const [serverStatus, setServerStatus] = useState('Checking connection...');
   const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState(null); // Add user state
 
   useEffect(() => {
     // Check connection to backend
@@ -35,7 +36,7 @@ function App() {
   return (
     <Router>
       <div className="app-container">
-        <Navbar />
+        <Navbar user={user} setUser={setUser} /> {/* Pass user and setUser to Navbar */}
         
         <div className="content">
           <Routes>
