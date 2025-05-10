@@ -13,10 +13,11 @@ function App() {
   const [serverStatus, setServerStatus] = useState('Checking connection...');
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null); // Add user state
-
+// 
   useEffect(() => {
     // Check connection to backend
     fetch('https://ukhikersba.onrender.com')
+      
       .then(res => res.text())
       .then(data => {
         setServerStatus('Server in your Service 😊😊 ');
